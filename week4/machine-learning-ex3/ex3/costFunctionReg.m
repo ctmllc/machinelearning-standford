@@ -20,7 +20,6 @@ prediction = sigmoid(X * theta);
 ltheta=[0 ; theta(2:size(theta), :)];
 J = cost + ((lambda/(2*m))*(ltheta'*ltheta));
 grad = (X'*(prediction-y)+ (lambda*ltheta))/m;
-%fprintf('\n*** m: %d, grad: %f, cost: %f ***\n', m, grad, J);
 
 % =============================================================
 

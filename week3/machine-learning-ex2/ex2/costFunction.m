@@ -6,9 +6,9 @@ function [J, grad] = costFunction(theta, X, y)
 
 % Initialize some useful values
 m = length(y); % number of training examples
-
 % You need to return the following variables correctly 
 prediction = sigmoid(X * theta);
+size(prediction)
 J = 1/m*((-y'*log(prediction))-((1-y)'*log(1-prediction)));
 grad = 1/m*(X'*(prediction-y));
 

@@ -34,7 +34,6 @@ prediction=sigmoid(OutputLayer);
 [temp, p] = max(prediction, [], 2);
 
 
-
 % =========================================================================
 
 end

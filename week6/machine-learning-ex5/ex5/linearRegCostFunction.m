@@ -18,17 +18,12 @@ grad = zeros(size(theta));
 %
 %               You should set J to the cost and grad to the gradient.
 %
-
-
-
-
-
-
-
-
-
-
-
+prediction=X*theta;
+J = computeCost(X,y,theta);
+ltheta=[0 ; theta(2:end) ];
+Regularization = (lambda/(2*m))*sum(ltheta .^ 2);
+J = J+Regularization;
+grad = 1/m*(X'*(prediction-y)) + ((lambda/m)*ltheta);
 
 % =========================================================================
 

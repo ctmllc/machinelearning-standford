@@ -25,12 +25,17 @@ centroids = zeros(K, n);
 %
 % Note: You can use a for-loop over the centroids to compute this.
 %
-
-
-
-
-
-
+currentcentroid=unique(idx);
+for i=1:K
+   countofcentroid=sum(idx==currentcentroid(i));
+   tempcentroid=[];
+   for j=1:m
+       if(idx(j)==currentcentroid(i))
+            tempcentroid=[tempcentroid; X(j,:)];
+        end
+    end
+    centroids(i,:)=sum(tempcentroid,1)/countofcentroid;
+end
 
 
 % =============================================================

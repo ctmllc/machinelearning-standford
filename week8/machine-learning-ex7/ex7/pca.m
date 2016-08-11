@@ -20,9 +20,9 @@ S = zeros(n);
 %       number of examples).
 %
 
+Ecov=(X' * X)/m;
 
-
-
+[U,S,V] = svd(Ecov);
 
 
 
